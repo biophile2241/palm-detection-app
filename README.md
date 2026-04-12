@@ -150,6 +150,17 @@ MediaPipe Model
 
 ## Screenshots
 
+| Camera | Skeleton |
+|--------|----------|
+| ![](Screenshots/Screenshot_20260412_211414_Palm%20Detection.jpg) | ![](Screenshots/Screenshot_20260412_211441_Palm%20Detection.jpg) |
+
+| Processing | Capture |
+|------------|--------|
+| ![](Screenshots/Screenshot_20260412_211518_Palm%20Detection.jpg) | ![](Screenshots/Screenshot_20260412_211539_Palm%20Detection.jpg) |
+
+| Detection | Result |
+|-----------|-------|
+| ![](Screenshots/Screenshot_20260412_211614_Palm%20Detection.jpg) | ![](Screenshots/Screenshot_20260412_211732_Palm%20Detection.jpg) |
 
 
 ---
