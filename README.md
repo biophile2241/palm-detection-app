@@ -63,10 +63,12 @@ to detect, analyze, and capture palm and finger images in real time.
 | Gson | Metadata JSON storage |
 
 ---
-
 ## Project Structure
+
+```text
 com.example.palmdetection
-├── MainActivity.kt                 
+│
+├── MainActivity.kt
 │
 ├── presentation/
 │   ├── BitmapOverlayHelper.kt
@@ -79,17 +81,16 @@ com.example.palmdetection
 │
 ├── domain/
 │   ├── HandAnalyzer.kt
-│   ├── HandInfo.kt                
-│   └── CaptureResult.kt             
+│   ├── HandInfo.kt
+│   └── CaptureResult.kt
 │
-└── data/
-    ├── CaptureManager.kt
-    ├── FramePreprocessor.kt
-    ├── HandLandmarkerHelper.kt
-    ├── MetadataManager.kt
-    └── CameraMetadata.kt
-
----
+├── data/
+│   ├── CaptureManager.kt
+│   ├── FramePreprocessor.kt
+│   ├── HandLandmarkerHelper.kt
+│   ├── MetadataManager.kt
+│   └── CameraMetadata.kt
+```
 
 ## Requirements
 
@@ -127,12 +128,10 @@ MediaPipe Model
 | Challenge | Solution |
 |---|---|
 | Skeleton misaligned with hand | Drew skeleton directly on MediaPipe input bitmap instead of screen overlay |
-| Gallery not showing saved images | Used MediaStore API with IS_PENDING flag for Android 10+ |
-| Finger crops losing shape | Increased padding to 35% for fingers, 20% for palm |
+| Finger crops losing shape |
 | Camera context leak in ViewModel | Switched to AndroidViewModel with applicationContext |
-| Frame rate overwhelming model | FPS gate in FramePreprocessor limits to ~12fps |
-| Dark environment detection | Gamma correction LUT brightens frames before sending to model |
-| Back of hand detected as palm | Cross product of wrist vectors determines orientation |
+| Frame rate overwhelming model | FPS gate in FramePreprocessor limits to ~12fps to 30fps as per device specifications|
+| Dark environment detection | Gamma correction LUT brightens frames before sending to model | Cross product of wrist vectors determines orientation |
 | SDK version conflicts | Kept minSdk 26, removed setTargetFrameRate API 31 call |
 
 ---
@@ -150,17 +149,17 @@ MediaPipe Model
 
 ## Screenshots
 
-| Camera | Skeleton |
+| Right Palm detected | Captured Details|
 |--------|----------|
 | ![](Screenshots/Screenshot_20260412_211414_Palm%20Detection.jpg) | ![](Screenshots/Screenshot_20260412_211441_Palm%20Detection.jpg) |
 
-| Processing | Capture |
+| Left Palm detected | Capture Details|
 |------------|--------|
 | ![](Screenshots/Screenshot_20260412_211518_Palm%20Detection.jpg) | ![](Screenshots/Screenshot_20260412_211539_Palm%20Detection.jpg) |
 
-| Detection | Result |
+| No Palm Detected | wrong orientation detected|
 |-----------|-------|
-| ![](Screenshots/Screenshot_20260412_211614_Palm%20Detection.jpg) | ![](Screenshots/Screenshot_20260412_211732_Palm%20Detection.jpg) |
+| ![](Screenshots/Screenshot_20260412_211614_Palm%20Detection.jpg) | ![](Screenshots/Screenshot_20260412_211705_Palm%20Detection.jpg) |
 
 
 ---
@@ -168,3 +167,4 @@ MediaPipe Model
 ## Author
 
 Shivam Kumar
+shivamkumar99852@gmail.com
