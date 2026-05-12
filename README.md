@@ -2,7 +2,7 @@
 
 An Android application that uses MediaPipe Hand Landmarker and OpenCV 
 to detect, analyze, and capture palm and finger images in real time.
-
+APK link: https://drive.google.com/file/d/1R3gEv8eFQC_ShP9JPn5ljEODQYtMIp8h/view?usp=drivesdk
 ---
 
 ## Features
